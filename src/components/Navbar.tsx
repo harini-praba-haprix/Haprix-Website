@@ -4,8 +4,9 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Solutions", href: "#solutions" },
+  { label: "About", href: "#about" },
+  { label: "Why HaPrix", href: "#why-haprix" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -16,10 +17,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="container flex items-center justify-between h-16">
         <a href="#" className="text-xl font-heading font-bold text-gradient-gold">
-          ZohoPro
+          HaPrix
         </a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
             <a
@@ -35,13 +35,11 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile toggle */}
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-background border-b border-border pb-4">
           <div className="container flex flex-col gap-3">

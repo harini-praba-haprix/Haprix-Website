@@ -1,36 +1,36 @@
 import { motion } from "framer-motion";
-import { Database, Workflow, AppWindow, BarChart3, Shield, Headphones } from "lucide-react";
+import { Workflow, Database, AppWindow, Brain, Link2, BarChart3 } from "lucide-react";
 
 const services = [
   {
-    icon: Database,
-    title: "Zoho CRM",
-    desc: "Custom CRM implementation, pipeline setup, lead management, and sales automation tailored to your workflow.",
+    icon: Workflow,
+    title: "Business Process Automation",
+    desc: "Automate manual workflows to improve efficiency and reduce operational costs. Includes workflow automation, approval processes, data synchronization, and process optimization.",
   },
   {
-    icon: Workflow,
-    title: "Automation & Workflows",
-    desc: "Automate repetitive tasks, create smart workflows, and connect your Zoho apps for seamless operations.",
+    icon: Database,
+    title: "Zoho CRM Implementation",
+    desc: "End-to-end CRM setup tailored to your business — Zoho CRM customization, sales pipeline automation, lead management systems, and CRM integrations.",
   },
   {
     icon: AppWindow,
-    title: "Zoho Creator Apps",
-    desc: "Build custom applications on Zoho Creator to solve unique business challenges without code limitations.",
+    title: "Custom Application Development",
+    desc: "Build custom business applications tailored to company operations — Zoho Creator apps, internal business tools, customer portals, and workflow management systems.",
+  },
+  {
+    icon: Brain,
+    title: "AI-Powered Automation",
+    desc: "Use AI to improve decision-making and automate intelligent tasks — AI assistants for business workflows, intelligent document processing, AI data insights, and smart automation.",
+  },
+  {
+    icon: Link2,
+    title: "System Integrations",
+    desc: "Connect multiple business platforms into a unified ecosystem — Zoho integrations, API integrations, payment gateway integrations, and third-party system connections.",
   },
   {
     icon: BarChart3,
-    title: "Analytics & Reporting",
-    desc: "Set up Zoho Analytics dashboards with real-time insights to make data-driven decisions confidently.",
-  },
-  {
-    icon: Shield,
-    title: "Data Migration",
-    desc: "Safely migrate your existing data from legacy systems into Zoho with zero downtime and full integrity.",
-  },
-  {
-    icon: Headphones,
-    title: "Training & Support",
-    desc: "Empower your team with hands-on training sessions and ongoing dedicated support to maximize ROI.",
+    title: "Data Analytics & Insights",
+    desc: "Transform raw data into actionable intelligence with business dashboards, data visualization, reporting automation, and performance tracking.",
   },
 ];
 
@@ -45,7 +45,7 @@ const ServicesSection = () => (
       >
         <span className="text-primary text-sm font-semibold tracking-widest uppercase">What We Do</span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-3">
-          End-to-End <span className="text-gradient-gold">Zoho Expertise</span>
+          Our <span className="text-gradient-gold">Services</span>
         </h2>
       </motion.div>
 
