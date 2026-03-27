@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import ZohoEcosystemSection from "@/components/ZohoEcosystemSection";
 import SolutionsSection from "@/components/SolutionsSection";
 import AboutSection from "@/components/AboutSection";
 import WhyHaPrixSection from "@/components/WhyHaPrixSection";
@@ -12,6 +13,7 @@ const Index = () => (
     <Navbar />
     <HeroSection />
     <ServicesSection />
+    <ZohoEcosystemSection />
     <SolutionsSection />
     <AboutSection />
     <WhyHaPrixSection />
