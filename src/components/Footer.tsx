@@ -56,8 +56,8 @@ const Footer = () => (
           © {new Date().getFullYear()} HaPrix. All rights reserved.
         </span>
         <div className="flex gap-6">
-          <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy</Link>
-          <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms</Link>
+          <Link to="/privacy" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy</Link>
+          <Link to="/terms" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms</Link>
         </div>
       </div>
     </div>
