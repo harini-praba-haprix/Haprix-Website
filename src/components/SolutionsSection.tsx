@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Users, Workflow, Globe, Package, Bot } from "lucide-react";
+import { Card3D } from "@/components/AnimationEffects";
 
 const solutions = [
   {
@@ -46,20 +47,15 @@ const SolutionsSection = () => (
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {solutions.map((s, i) => (
-          <motion.div
-            key={s.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="group p-7 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
-          >
-            <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-              <s.icon size={22} className="text-primary" />
+          <Card3D key={s.title} delay={i * 0.1}>
+            <div className="group p-7 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 h-full">
+              <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <s.icon size={22} className="text-primary" />
+              </div>
+              <h3 className="text-lg font-heading font-semibold mb-2">{s.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
             </div>
-            <h3 className="text-lg font-heading font-semibold mb-2">{s.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
-          </motion.div>
+          </Card3D>
         ))}
       </div>
     </div>

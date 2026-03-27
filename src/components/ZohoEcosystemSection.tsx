@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import zohoLogo from "@/assets/zoho-logo.png";
+import { Card3D } from "@/components/AnimationEffects";
 import {
   Users, BookOpen, Palette, Code2, Mail, Headphones,
   BarChart3, Package, FileText, Megaphone, ClipboardList, Globe
@@ -44,20 +45,15 @@ const ZohoEcosystemSection = () => (
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
         {zohoProducts.map((product, i) => (
-          <motion.div
-            key={product.name}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.05 }}
-            className="group p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 text-center"
-          >
-            <div className="w-11 h-11 rounded-lg bg-secondary flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 transition-colors">
-              <product.icon size={22} className={product.color} />
+          <Card3D key={product.name} delay={i * 0.05}>
+            <div className="group p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 text-center h-full">
+              <div className="w-11 h-11 rounded-lg bg-secondary flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 transition-colors">
+                <product.icon size={22} className={product.color} />
+              </div>
+              <h3 className="text-sm font-heading font-semibold mb-1">{product.name}</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">{product.desc}</p>
             </div>
-            <h3 className="text-sm font-heading font-semibold mb-1">{product.name}</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">{product.desc}</p>
-          </motion.div>
+          </Card3D>
         ))}
       </div>
     </div>
