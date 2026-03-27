@@ -7,6 +7,7 @@ import AboutSection from "@/components/AboutSection";
 import WhyHaPrixSection from "@/components/WhyHaPrixSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import ScrollButton from "@/components/ScrollButton";
 
 const Index = () => (
   <div className="min-h-screen">
@@ -19,6 +20,7 @@ const Index = () => (
     <WhyHaPrixSection />
     <ContactSection />
     <Footer />
+    <ScrollButton />
   </div>
 );
 
