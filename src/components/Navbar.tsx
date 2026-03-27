@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -16,7 +17,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="container flex items-center justify-between h-16">
-        <a href="#" className="text-xl font-heading font-bold text-gradient-gold">
+        <a href="#" className="flex items-center gap-2 text-xl font-heading font-bold text-gradient-gold">
+          <img src={logo} alt="HaPrix Logo" className="h-8 w-8 object-contain" />
           HaPrix
         </a>
 
