@@ -13,7 +13,7 @@ const HeroSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+    <section id="hero" ref={ref} className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       <motion.div
         className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none"
         style={{ y: useTransform(scrollYProgress, [0, 1], [0, -100]) }}

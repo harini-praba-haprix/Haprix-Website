@@ -1,24 +1,7 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Send, Mail, Phone, MapPin } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
-  };
 
   return (
     <section id="contact" className="py-24">
@@ -38,25 +21,20 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <motion.form
-            onSubmit={handleSubmit}
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-5"
+            className="w-full h-[600px] rounded-2xl overflow-hidden border border-border bg-card shadow-2xl hover:shadow-primary/5 transition-shadow duration-500"
           >
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Input placeholder="Your Name" required className="bg-card border-border" />
-              <Input type="email" placeholder="Email Address" required className="bg-card border-border" />
-            </div>
-            <Input placeholder="Company Name" className="bg-card border-border" />
-            <Textarea placeholder="Tell us about your project..." rows={5} required className="bg-card border-border resize-none" />
-            <Button variant="hero" size="lg" type="submit" disabled={loading} className="w-full sm:w-auto">
-              {loading ? "Sending..." : "Send Message"}
-              <Send size={16} />
-            </Button>
-          </motion.form>
+            <iframe
+              aria-label='Contact Us'
+              frameBorder="0"
+              style={{ height: '100%', width: '100%', border: 'none' }}
+              src='https://forms.zohopublic.in/haprixtechnologiesprivatelimi1/form/Contactwithfeedback/formperma/xJ8UE-0ilYLsJ2VblpawjVFeDaUOgbLerc3j8IlQzww'
+            />
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
