@@ -30,7 +30,7 @@ const ZohoEcosystemSection = () => (
         className="text-center mb-16"
       >
         <div className="flex items-center justify-center gap-3 mb-4">
-          <img src={zohoLogo} alt="Zoho" className="h-10 object-contain" loading="lazy" width={512} height={512} />
+          <img src={zohoLogo} alt="Zoho" className="h-20 object-contain" loading="lazy" width={512} height={512} />
         </div>
         <span className="text-primary text-sm font-semibold tracking-widest uppercase">Zoho Ecosystem</span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-3">
