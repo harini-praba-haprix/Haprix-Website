@@ -5,7 +5,6 @@ import SolutionsSection from "@/components/SolutionsSection";
 import AboutSection from "@/components/AboutSection";
 import WhyHaPrixSection from "@/components/WhyHaPrixSection";
 import ContactSection from "@/components/ContactSection";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
 
 const Index = () => (
@@ -18,7 +17,6 @@ const Index = () => (
     <WhyHaPrixSection />
     <ContactSection />
     <Footer />
-    <WhatsAppButton />
   </div>
 );
 
