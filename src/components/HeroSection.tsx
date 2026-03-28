@@ -13,7 +13,7 @@ const HeroSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section id="hero" ref={ref} className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+    <section id="hero" ref={ref} className="relative min-h-[100svh] flex lg:items-center pt-32 pb-20 lg:pt-16 lg:pb-0 overflow-hidden">
       <motion.div
         className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none"
         style={{ y: useTransform(scrollYProgress, [0, 1], [0, -100]) }}
@@ -33,7 +33,7 @@ const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 mb-8"
           >
             <Cpu size={14} className="text-primary" />
-            <span className="text-xs font-semibold text-primary uppercase tracking-widest leading-none">Systems Architects for Growth</span>
+            <span className="text-xs font-semibold text-primary uppercase tracking-widest">Systems Architects for Growth</span>
           </motion.div>
 
           <motion.h1
@@ -52,8 +52,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
           >
-            Empowering high-growth organizations with engineered ecosystems and Cognitive Automation. 
-            At HaPrix, we don’t just implement tools; we build the strategic digital foundations 
+            Empowering high-growth organizations with engineered ecosystems and Cognitive Automation.
+            At HaPrix, we don’t just implement tools; we build the strategic digital foundations
             for your business evolution.
           </motion.p>
 
