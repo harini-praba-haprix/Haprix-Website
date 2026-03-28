@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logoIcon from "@/assets/logo_icon.png";
+import { cn } from "@/lib/utils";
 
-const Footer = () => (
-  <footer className="py-12 border-t border-border">
+const Footer = () => {
+  const location = useLocation();
+  const isPrivacy = location.pathname === "/privacy";
+  const isTerms = location.pathname === "/terms";
+
+  return (
+    <footer className="py-12 border-t border-border">
     <div className="container">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
         {/* Brand */}
@@ -60,12 +66,31 @@ const Footer = () => (
           © {new Date().getFullYear()} HaPrix. All rights reserved.
         </span>
         <div className="flex gap-6">
-          <Link to="/privacy" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy</Link>
-          <Link to="/terms" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms</Link>
+          <Link 
+            to="/privacy" 
+            onClick={() => window.scrollTo(0, 0)} 
+            className={cn(
+              "text-sm transition-colors",
+              isPrivacy ? "text-primary font-medium" : "text-muted-foreground hover:text-primary"
+            )}
+          >
+            Privacy
+          </Link>
+          <Link 
+            to="/terms" 
+            onClick={() => window.scrollTo(0, 0)} 
+            className={cn(
+              "text-sm transition-colors",
+              isTerms ? "text-primary font-medium" : "text-muted-foreground hover:text-primary"
+            )}
+          >
+            Terms
+          </Link>
         </div>
       </div>
     </div>
   </footer>
-);
+  );
+};
 
 export default Footer;
