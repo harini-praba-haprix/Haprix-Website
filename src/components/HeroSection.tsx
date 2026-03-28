@@ -30,31 +30,31 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 mb-8"
           >
             <Cpu size={14} className="text-primary" />
-            <span className="text-xs font-medium text-muted-foreground">Intelligent Automation & AI Solutions</span>
+            <span className="text-xs font-semibold text-primary uppercase tracking-widest leading-none">Systems Architects for Growth</span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 40, rotateX: 15 }}
             animate={{ opacity: 1, y: 0, rotateX: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6"
+            className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-8"
             style={{ perspective: "1000px" }}
           >
-            Build Smarter Systems with{" "}
-            <span className="text-gradient-gold">HaPrix</span>
+            Architecting the <span className="text-gradient-gold">Infrastructure</span> of Intelligent Business
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed"
+            className="text-xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
           >
-            We design intelligent automation systems, custom business applications, and AI-powered solutions
-            that streamline operations, reduce manual effort, and help organizations grow faster.
+            Empowering high-growth organizations with engineered ecosystems and Cognitive Automation. 
+            At HaPrix, we don’t just implement tools; we build the strategic digital foundations 
+            for your business evolution.
           </motion.p>
 
           <motion.div
@@ -81,9 +81,9 @@ const HeroSection = () => {
             className="flex flex-wrap gap-12 mt-16 pt-8 border-t border-border"
           >
             {[
-              { value: "Automation", label: "Intelligent Workflows" },
-              { value: "Custom", label: "Tailored Solutions" },
-              { value: "Scalable", label: "Future-Ready Tech" },
+              { value: "50+", label: "Happy Clients" },
+              { value: "10+", label: "Years Experience" },
+              { value: "98%", label: "Success Rate" },
             ].map((s, i) => (
               <motion.div
                 key={s.label}
@@ -91,7 +91,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + i * 0.15 }}
               >
-                <div className="text-2xl font-heading font-bold text-primary">{s.value}</div>
+                <div className="text-3xl font-heading font-bold text-gradient-gold">{s.value}</div>
                 <div className="text-sm text-muted-foreground mt-1">{s.label}</div>
               </motion.div>
             ))}

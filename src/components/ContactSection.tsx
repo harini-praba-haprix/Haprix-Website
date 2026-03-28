@@ -26,7 +26,7 @@ const ContactSection = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full h-[600px] rounded-2xl overflow-hidden border border-border bg-card shadow-2xl hover:shadow-primary/5 transition-shadow duration-500"
+            className="w-full h-[850px] rounded-2xl overflow-hidden border border-border bg-card shadow-2xl hover:shadow-primary/5 transition-shadow duration-500"
           >
             <iframe
               aria-label='Contact Us'

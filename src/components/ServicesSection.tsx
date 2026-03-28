@@ -4,34 +4,34 @@ import { Card3D } from "@/components/AnimationEffects";
 
 const services = [
   {
-    icon: Workflow,
-    title: "Business Process Automation",
-    desc: "Automate manual workflows to improve efficiency and reduce operational costs. Includes workflow automation, approval processes, data synchronization, and process optimization.",
-  },
-  {
     icon: Database,
-    title: "Zoho CRM Implementation",
-    desc: "End-to-end CRM setup tailored to your business — Zoho CRM customization, sales pipeline automation, lead management systems, and CRM integrations.",
+    title: "Strategic CRM Architecture",
+    desc: "We design CRM systems that don't just store data, but drive revenue through unified sales intelligence and automated lead life cycles.",
   },
   {
     icon: AppWindow,
-    title: "Custom Application Development",
-    desc: "Build custom business applications tailored to company operations — Zoho Creator apps, internal business tools, customer portals, and workflow management systems.",
+    title: "Cognitive Process Automation",
+    desc: "Enterprise-wide workflow automation that adapts to your needs. We eliminate manual friction by engineering self-sustaining digital processes.",
   },
   {
-    icon: Brain,
-    title: "AI-Powered Automation",
-    desc: "Use AI to improve decision-making and automate intelligent tasks — AI assistants for business workflows, intelligent document processing, AI data insights, and smart automation.",
+    icon: Workflow,
+    title: "Unified Digital Ecosystems",
+    desc: "Seamlessly connecting your entire business stack under a single, orchestrated Zoho infrastructure. Eliminating silos for operational harmony.",
   },
   {
     icon: Link2,
-    title: "System Integrations",
-    desc: "Connect multiple business platforms into a unified ecosystem — Zoho integrations, API integrations, payment gateway integrations, and third-party system connections.",
+    title: "Bespoke App Development",
+    desc: "Custom application engineering tailored to your unique business logic. We build the specialized tools that off-the-shelf software can't provide.",
   },
   {
     icon: BarChart3,
-    title: "Data Analytics & Insights",
-    desc: "Transform raw data into actionable intelligence with business dashboards, data visualization, reporting automation, and performance tracking.",
+    title: "Data Intelligence & Analytics",
+    desc: "Transforming passive data into strategic assets. Our bespoke dashboards provide the ROI clarity needed for high-stakes decision-making.",
+  },
+  {
+    icon: Brain,
+    title: "Eco-System Audits & Support",
+    desc: "Continuous optimization and architectural audits. We ensure your digital infrastructure evolves as fast as your global business goals.",
   },
 ];
 
@@ -53,12 +53,12 @@ const ServicesSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s, i) => (
           <Card3D key={s.title} delay={i * 0.1}>
-            <div className="group p-8 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:glow-gold h-full">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                <s.icon size={24} className="text-primary" />
+            <div className="group p-8 rounded-xl glass-card glass-card-hover border-border transition-all duration-500 h-full">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-all duration-300">
+                <s.icon size={28} className="text-primary group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-3">{s.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+              <h3 className="text-xl font-heading font-bold mb-3 tracking-tight">{s.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed antialiased">{s.desc}</p>
             </div>
           </Card3D>
         ))}

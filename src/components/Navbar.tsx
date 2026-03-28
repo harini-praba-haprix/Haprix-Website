@@ -4,13 +4,15 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logoIcon from "@/assets/logo_icon.png";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Solutions", href: "#solutions" },
+  { label: "Home", href: "#hero" },
   { label: "About", href: "#about" },
-  { label: "Why HaPrix", href: "#why-haprix" },
+  { label: "Services", href: "#services" },
+  { label: "Ecosystem", href: "#zoho-ecosystem" },
+  { label: "Products", href: "/products" },
+  { label: "Solutions", href: "#industries" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -19,15 +21,22 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   
-  const activeSection = useScrollSpy(navLinks.map(l => l.href));
+  const activeSection = useScrollSpy(navLinks.filter(l => l.href.startsWith("#")).map(l => l.href));
 
   const handleNavClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
-    if (location.pathname !== "/") {
+    
+    if (href.startsWith("/")) {
+      navigate(href);
+      window.scrollTo(0, 0);
+    } else if (location.pathname !== "/") {
       navigate("/" + href);
     } else {
       const el = document.querySelector(href);
-      el?.scrollIntoView({ behavior: "smooth" });
+      if (el) {
+        const y = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     }
     setOpen(false);
   };
@@ -38,15 +47,21 @@ const Navbar = () => {
         <a
           href="/"
           onClick={(e) => { e.preventDefault(); navigate("/"); window.scrollTo(0, 0); }}
-          className="flex items-center gap-3 text-xl font-heading font-bold text-gradient-gold"
+          className="flex items-center gap-2 group"
         >
-          <img src={logo} alt="HaPrix Logo" className="h-10 w-10 object-contain" />
-          HaPrix
+          <img 
+            src={logoIcon} 
+            alt="HaPrix Logo" 
+            className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-110" 
+          />
+          <span className="text-2xl font-bold text-gradient-gold tracking-tight">HaPrix</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => {
-            const isActive = activeSection === l.href.slice(1);
+            const isActive = l.href.startsWith("/") 
+              ? location.pathname === l.href 
+              : activeSection === l.href.slice(1);
             return (
               <a
                 key={l.href}
@@ -77,7 +92,9 @@ const Navbar = () => {
         <div className="md:hidden bg-background border-b border-border pb-4">
           <div className="container flex flex-col gap-3">
             {navLinks.map((l) => {
-              const isActive = activeSection === l.href.slice(1);
+              const isActive = l.href.startsWith("/") 
+                ? location.pathname === l.href 
+                : activeSection === l.href.slice(1);
               return (
                 <a
                   key={l.href}

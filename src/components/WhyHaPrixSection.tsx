@@ -1,29 +1,35 @@
 import { motion } from "framer-motion";
-import { Check, Cog, Lightbulb, Users, Award } from "lucide-react";
+import { Check, Cog, BarChart3, Link2, Award } from "lucide-react";
+import { Card3D } from "@/components/AnimationEffects";
 
 const reasons = [
-  "Intelligent Automation",
-  "Custom-Built Solutions",
-  "Scalable Architecture",
-  "Secure Cloud Infrastructure",
-  "Future-Ready AI Systems",
+  "Zoho CRM Expertise",
+  "Process Automation",
+  "Custom Integrations",
+  "Data Analytics",
+  "Scalable Solutions",
 ];
 
 const pillars = [
   {
+    icon: Cog,
+    title: "Architectural Integrity",
+    desc: "We don't just 'set up' Zoho. We architect the underlying business logic to ensure your systems are robust and engineered for high-performance.",
+  },
+  {
+    icon: BarChart3,
+    title: "Strategic Intelligence",
+    desc: "Our decade of experience allows us to look beyond software. We provide the strategic insight needed to optimize your entire business model.",
+  },
+  {
+    icon: Link2,
+    title: "Future-Proof Engineering",
+    desc: "Our ecosystems are built with the modularity and foresight required to adapt to future market shifts and technological advancements.",
+  },
+  {
     icon: Award,
-    title: "Operational Excellence",
-    desc: "We deliver solutions that improve efficiency, reliability, and performance across business processes — streamlining workflows and reducing manual effort.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovation & Technology",
-    desc: "We leverage automation, cloud capabilities, and AI-driven systems to create scalable solutions that enable organizations to operate smarter.",
-  },
-  {
-    icon: Users,
-    title: "Customer-Centric Approach",
-    desc: "Every business has unique challenges. We focus on understanding client needs and delivering customized solutions that add real value.",
+    title: "Security-First Mentality",
+    desc: "In an era of data vulnerability, we prioritize enterprise-grade security protocols across every layer of your digital infrastructure.",
   },
 ];
 
@@ -40,10 +46,10 @@ const WhyHaPrixSection = () => (
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-3">
           Why Choose <span className="text-gradient-gold">HaPrix</span>
         </h2>
-        <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-sm leading-relaxed">
-          We design and build intelligent business systems that help organizations automate processes,
-          improve productivity, and make better decisions. Our solutions simplify complex workflows,
-          integrate business applications, and create scalable digital systems tailored to each organization's needs.
+        <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-sm leading-relaxed">
+          HaPrix was founded on the principle that digital transformation requires more than just software—it requires 
+          architectural precision. We bridge the gap between complex technological capabilities and your unique 
+          strategic objectives, building systems that act as the backbone for your organizational growth.
         </p>
       </motion.div>
 
@@ -63,22 +69,17 @@ const WhyHaPrixSection = () => (
       </motion.div>
 
       {/* Pillars */}
-      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {pillars.map((p, i) => (
-          <motion.div
-            key={p.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="p-8 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
-          >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
-              <p.icon size={24} className="text-primary" />
+          <Card3D key={p.title} delay={i * 0.1}>
+            <div className="p-8 rounded-xl glass-card glass-card-hover border-border transition-all duration-500 group h-full">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-all duration-300">
+                <p.icon size={24} className="text-primary group-hover:rotate-12 transition-transform duration-300" />
+              </div>
+              <h3 className="text-xl font-heading font-bold mb-3 tracking-tight">{p.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed antialiased">{p.desc}</p>
             </div>
-            <h3 className="text-xl font-heading font-semibold mb-3">{p.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
-          </motion.div>
+          </Card3D>
         ))}
       </div>
 
@@ -91,15 +92,15 @@ const WhyHaPrixSection = () => (
       >
         <div className="flex items-center gap-3 mb-5">
           <Cog size={22} className="text-primary" />
-          <h3 className="text-lg font-heading font-semibold">Our Strengths</h3>
+          <h3 className="text-lg font-heading font-semibold">Our Architectural Philosophy</h3>
         </div>
         <ul className="space-y-3">
           {[
-            "Expertise in business automation and workflow optimization",
-            "Ability to design customized business applications",
-            "Strong focus on intelligent systems and modern technologies",
-            "Scalable solutions designed for future growth",
-            "Commitment to delivering reliable and efficient systems",
+            "Systems-driven approach to complex business logic",
+            "Deep consultative expertise across the Zoho ecosystem",
+            "Bespoke engineering for vertical-specific requirements",
+            "Strategic roadmap development for digital evolution",
+            "Relentless focus on technical excellence and ROI",
           ].map((s) => (
             <li key={s} className="flex items-start gap-2 text-sm">
               <Check size={16} className="text-primary mt-0.5 shrink-0" />

@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
+import logoIcon from "@/assets/logo_icon.png";
 
 const Footer = () => (
   <footer className="py-12 border-t border-border">
     <div className="container">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
         {/* Brand */}
-        <div>
-          <span className="text-xl font-heading font-bold text-gradient-gold">HaPrix</span>
-          <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-            Intelligent automation and AI-driven solutions for modern businesses.
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-2">
+            <img src={logoIcon} alt="HaPrix Logo" className="h-8 w-auto object-contain" />
+            <span className="text-xl font-bold text-gradient-gold tracking-tight">HaPrix</span>
+          </div>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Architecting the infrastructure of intelligent business with over 10+ years of digital transformation experience.
           </p>
         </div>
 
@@ -44,8 +48,8 @@ const Footer = () => (
         <div>
           <h4 className="text-sm font-heading font-semibold mb-3">Contact Details</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>Phone: +91 7358662199</li>
-            <li>Email: harini@haprixai.com</li>
+            <li>Phone: <a href="tel:+917358662199" className="hover:text-primary transition-colors">+91 7358662199</a></li>
+            <li>Email: <a href="mailto:harini@haprixai.com" className="text-primary font-bold underline hover:text-primary-foreground transition-colors">harini@haprixai.com</a></li>
             <li>Chennai - 603210, India</li>
           </ul>
         </div>
