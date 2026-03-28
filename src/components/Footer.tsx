@@ -8,7 +8,7 @@ const Footer = () => (
         {/* Brand */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
-            <img src={logoIcon} alt="HaPrix Logo" className="h-8 w-auto object-contain" />
+            <img src={logoIcon} alt="HaPrix Logo" className="h-10 w-auto object-contain" />
             <span className="text-xl font-bold text-gradient-gold tracking-tight">HaPrix</span>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">

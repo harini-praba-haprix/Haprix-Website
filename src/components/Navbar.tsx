@@ -52,7 +52,7 @@ const Navbar = () => {
           <img 
             src={logoIcon} 
             alt="HaPrix Logo" 
-            className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-110" 
+            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110" 
           />
           <span className="text-2xl font-bold text-gradient-gold tracking-tight">HaPrix</span>
         </a>
