@@ -49,7 +49,7 @@ const Footer = () => (
           <h4 className="text-sm font-heading font-semibold mb-3">Contact Details</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>Phone: <a href="tel:+917358662199" className="hover:text-primary transition-colors">+91 7358662199</a></li>
-            <li>Email: <a href="mailto:harini@haprixai.com" className="text-primary font-bold underline hover:text-primary-foreground transition-colors">harini@haprixai.com</a></li>
+            <li>Email: <a href="mailto:harini@haprixai.com" className="font-medium text-gradient-gold hover:opacity-80 transition-opacity underline-offset-4 hover:underline">harini@haprixai.com</a></li>
             <li>Chennai - 603210, India</li>
           </ul>
         </div>

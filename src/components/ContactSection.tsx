@@ -53,14 +53,23 @@ const ContactSection = () => {
             <div className="space-y-4">
               {[
                 { icon: Phone, text: "+91 7358662199" },
-                { icon: Mail, text: "harini@haprixai.com" },
+                { icon: Mail, text: "harini@haprixai.com", isEmail: true },
                 { icon: MapPin, text: "No.159/160, Viji Homes, Urappakkam, Chennai - 603210" },
               ].map((item) => (
                 <div key={item.text} className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     <item.icon size={18} className="text-primary" />
                   </div>
-                  <span className="text-sm text-secondary-foreground mt-2">{item.text}</span>
+                  {item.isEmail ? (
+                    <a 
+                      href={`mailto:${item.text}`} 
+                      className="text-sm mt-2 font-medium text-gradient-gold hover:opacity-80 transition-opacity underline-offset-4 hover:underline"
+                    >
+                      {item.text}
+                    </a>
+                  ) : (
+                    <span className="text-sm text-secondary-foreground mt-2">{item.text}</span>
+                  )}
                 </div>
               ))}
             </div>
