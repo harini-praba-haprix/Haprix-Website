@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import ScrollButton from "@/components/ScrollButton";
 import { Card3D } from "@/components/AnimationEffects";
 import { Button } from "@/components/ui/button";
-import { 
-  Target, Mail, Landmark, Users, Scale, Headphones, 
-  BarChart3, ClipboardList, Code2, ArrowRight, CheckCircle2 
+import {
+  Target, Mail, Landmark, Users, Scale, Headphones,
+  BarChart3, ClipboardList, Code2, ArrowRight, CheckCircle2
 } from "lucide-react";
 
 // The rewritten and enhanced product data
@@ -271,20 +271,20 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden border-b border-border">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
-        
+
         <div className="container relative z-10 text-center max-w-4xl">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block"
           >
             Product Portfolio
           </motion.span>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -292,7 +292,7 @@ const Products = () => {
           >
             Complete Zoho Ecosystem at Your <span className="text-gradient-gold">Fingertips</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -300,7 +300,7 @@ const Products = () => {
           >
             Discover comprehensive business solutions across all categories. From sales automation to project management, we help you leverage the complete Zoho suite for your digital transformation.
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -334,8 +334,8 @@ const Products = () => {
 
           <div className="space-y-24">
             {productCategories.map((category, index) => (
-              <motion.div 
-                key={category.id} 
+              <motion.div
+                key={category.id}
                 id={category.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -361,7 +361,7 @@ const Products = () => {
                       <div className="bg-card border border-border rounded-xl p-6 h-full flex flex-col hover:border-primary/40 transition-colors group">
                         <h4 className="text-xl font-bold mb-2 font-heading group-hover:text-primary transition-colors">{product.name}</h4>
                         <p className="text-sm text-muted-foreground mb-6 h-10">{product.desc}</p>
-                        
+
                         <div className="mt-auto pt-4 border-t border-border/50">
                           <ul className="space-y-3">
                             {product.features.map((feature) => (
