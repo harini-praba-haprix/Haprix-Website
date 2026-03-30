@@ -312,7 +312,7 @@ const Products = () => {
               Explore Solutions
             </Button>
             <Button size="lg" variant="hero-outline" asChild>
-              <a href="/#implementation">
+              <a href="/implementation">
                 View Implementation Services <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </Button>
