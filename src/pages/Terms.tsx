@@ -68,7 +68,7 @@ const Terms = () => (
           <section>
             <h2 className="text-lg font-heading font-semibold mb-2">10. Contact Us</h2>
             <p>For questions about these terms, please contact us at:</p>
-            <p className="mt-2">Email: <a href="mailto:harini@haprixai.com" className="font-medium text-gradient-gold hover:opacity-80 transition-opacity underline-offset-4 hover:underline">harini@haprixai.com</a><br />Phone: +91 7358662199<br />Address: No.159/160, Viji Homes, Urappakkam, Chennai - 603210</p>
+            <p className="mt-2">Email: <a href="mailto:info@haprixai.com" className="font-medium text-gradient-gold hover:opacity-80 transition-opacity underline-offset-4 hover:underline">info@haprixai.com</a><br />Phone: +91 7358662199<br />Address: No.159/160, Viji Homes, Urappakkam, Chennai - 603210</p>
           </section>
         </div>
       </div>

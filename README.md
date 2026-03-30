@@ -42,4 +42,4 @@ HaPrix is a modern, high-performance business website showcasing intelligent aut
 
 ## 🤝 Contact
 
-For business inquiries: [harini@haprixai.com](mailto:harini@haprixai.com)
+For business inquiries: [info@haprixai.com](mailto:info@haprixai.com)

@@ -48,7 +48,7 @@ const Privacy = () => (
 
           <section>
             <h2 className="text-lg font-heading font-semibold mb-2">6. Your Rights</h2>
-            <p>You have the right to access, correct, or delete your personal data. To exercise these rights, please contact us at <a href="mailto:harini@haprixai.com" className="font-medium text-gradient-gold hover:opacity-80 transition-opacity underline-offset-4 hover:underline">harini@haprixai.com</a>.</p>
+            <p>You have the right to access, correct, or delete your personal data. To exercise these rights, please contact us at <a href="mailto:info@haprixai.com" className="font-medium text-gradient-gold hover:opacity-80 transition-opacity underline-offset-4 hover:underline">info@haprixai.com</a>.</p>
           </section>
 
           <section>
@@ -59,7 +59,7 @@ const Privacy = () => (
           <section>
             <h2 className="text-lg font-heading font-semibold mb-2">8. Contact Us</h2>
             <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-            <p className="mt-2">Email: <a href="mailto:harini@haprixai.com" className="font-medium text-gradient-gold hover:opacity-80 transition-opacity underline-offset-4 hover:underline">harini@haprixai.com</a><br />Phone: +91 7358662199<br />Address: No.159/160, Viji Homes, Urappakkam, Chennai - 603210</p>
+            <p className="mt-2">Email: <a href="mailto:info@haprixai.com" className="font-medium text-gradient-gold hover:opacity-80 transition-opacity underline-offset-4 hover:underline">info@haprixai.com</a><br />Phone: +91 7358662199<br />Address: No.159/160, Viji Homes, Urappakkam, Chennai - 603210</p>
           </section>
         </div>
       </div>
