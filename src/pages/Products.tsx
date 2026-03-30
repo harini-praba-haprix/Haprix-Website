@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -312,9 +313,9 @@ const Products = () => {
               Explore Solutions
             </Button>
             <Button size="lg" variant="hero-outline" asChild>
-              <a href="/implementation">
+              <Link to="/implementation">
                 View Implementation Services <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
+              </Link>
             </Button>
           </motion.div>
         </div>
