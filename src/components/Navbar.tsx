@@ -11,7 +11,7 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Ecosystem", href: "#zoho-ecosystem" },
-  { label: "Products", href: "#products" },
+  { label: "Products", href: "/#products" },
   { label: "Solutions", href: "#industries" },
   { label: "Contact", href: "#contact" },
 ];
